@@ -9,8 +9,7 @@ const site = {
   pathPrefix: '/',
   title: 'Gatsby Starter Blog',
   description: 'A starter blog with asciidoctor.',
-  // demo site url
-  siteUrl: 'https://gatsby-blog-for-hns-demo.netlify.com',
+  siteUrl: 'https://www.hitsuji-no-shippo.me',
   social : {
     twitter: author.twitter,
   },
@@ -26,8 +25,8 @@ const supportedLanguages = {
 };
 
 const repository = {
-  url: 'https://github.com/hitsuji-no-shippo/gatsby-blog-for-hns',
-  name: 'gatsby-blog-for-hns',
+  url: 'https://github.com/hitsuji-no-shippo/blog-with-gatsby',
+  name: 'blog-with-gatsby',
   displaysLink: true,
 }
 

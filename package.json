@@ -1,10 +1,10 @@
 {
-  "name": "@hitsuji_no_shippo/gatsby-blog-for-hns",
-  "description": "gatsby blog for hitsuji no shippo",
-  "version": "0.1.0",
+  "name": "@hitsuji_no_shippo/blog-with-gatsby",
+  "description": "hitsuji no shippo blog",
+  "version": "0.0.0",
   "author": "hitsuji no shippo",
   "bugs": {
-    "url": "https://github.com/hitsuji-no-shippo/gatsby-blog-for-hns/issues"
+    "url": "https://github.com/hitsuji-no-shippo/blog-with-gatsby/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
@@ -67,7 +67,7 @@
     "lint-staged": "^9.5.0",
     "prettier": "^1.18.2"
   },
-  "homepage": "https://github.com/hitsuji-no-shippo/gatsby-blog-for-hns",
+  "homepage": "https://github.com/hitsuji-no-shippo/blog-with-gatsby",
   "keywords": [
     "gatsbyjs",
     "starter",
@@ -81,7 +81,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "github:hitsuji-no-shippo/gatsby-blog-for-hns"
+    "url": "github:hitsuji-no-shippo/blog-with-gatsby"
   },
   "scripts": {
     "clone-articles": "bash ./setup/clone-articles.sh",

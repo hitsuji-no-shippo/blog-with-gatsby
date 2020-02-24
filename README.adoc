@@ -1,11 +1,11 @@
-= gatsby-blog-for-hns
+= blog-with-gatsby
 :author-name: hitsuji no shippo
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.1.0
-:revdate: 2020-03-01T04:06:22+0900
-:revremark: Add Revision section.
+:revnumber: v0.0.0
+:revdate: 2020-03-01T04:32:39+0900
+:revremark: Change name and url of repository and blog.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -36,7 +36,7 @@ ifndef::env-github[:icons: font]
 :copyright-template: Copyright (c) 2020
 :copyright: {copyright-template} {author-name}
 // Page Attributes
-:page-creation-date: 2020-03-01T03:56:58+0900
+:page-creation-date: 2020-03-01T04:32:39+0900
 // Variables
 :netlify-app-url: https://app.netlify.com
 :github-url: https://github.com
@@ -47,17 +47,13 @@ image:{repository-url}/workflows/netlify-deploy/badge.svg[
   GitHub Actions Status,
   link={repository-url}/actions?query=workflow%3Anetlify-deploy,
   window=_blank]
-image:https://api.netlify.com/api/v1/badges/58f296f9-f521-447f-a8b3-b7cbe986ad76/deploy-status[
+image:https://api.netlify.com/api/v1/badges/7ce502bf-14a7-4509-94ea-ad4ffb97aafa/deploy-status[
   Netlify Status,
-  link={netlify-app-url}/sites/{doctitle}-demo/deploys,
+  link={netlify-app-url}/sites/hitsuji-no-shippo/deploys,
   window=_blank]
 
-:demo-url: https://{doctitle}-demo.netlify.com
-.Demo
-* link:{demo-url}[
-  Home^]
-* link:{demo-url}/asciidoctor-examples/[
-  Asciidoctor Examples^].
+.Blog
+link:https://www.hitsuji-no-shippo.me[Every Day, Every Day is Birthdays^]
 
 image:https://www.netlify.com/img/deploy/button.svg[
   Deploy to Netlify,
