@@ -9,6 +9,7 @@ import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import Tag from 'components/Tag';
 import Bio from 'components/Bio';
+import SEO from 'components/SEO';
 import NavigationBar from 'components/NavigationBar';
 import { useLang } from 'context/LanguageContext';
 import { formatMessage } from 'utils/i18n';
@@ -32,6 +33,7 @@ const TagsPage = ({
       title={title}
       breadcrumbs={[{ text: tTags }]}
     >
+      <SEO title={tTags} />
       <aside>
         <Bio />
       </aside>

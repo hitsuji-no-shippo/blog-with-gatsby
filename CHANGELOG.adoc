@@ -3,13 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.1.0
-:revdate: 2020-03-01T04:31:48+0900
-:revremark: add log that change the following items: + \
-            * name + \
-            * urls of repository and blog + \
-            * description + \
-            * version
+:revnumber: v1.2.0
+:revdate: 2020-03-01T04:34:55+0900
+:revremark: add log that add `Hatena::Bookmark` in meta.
 :doctype: article
 :description: blog-with-gatsby Change Log
 :title:
@@ -46,6 +42,15 @@ ifndef::env-github[:icons: font]
 :github-profile-url: {github-url}/hitsuji-no-shippo
 :repository-url: {github-profile-url}/blog-with-gatsby
 :issues-url: {repository-url}/issues
+
+== 0.1.0 (2020-03-01)
+
+=== Features
+
+==== Add
+
+* `Hatena::Bookmark` in meta. (close link:{issues-url}/3[#3^])
+
 
 == 0.0.0 (2020-03-01)
 

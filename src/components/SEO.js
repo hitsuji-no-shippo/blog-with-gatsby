@@ -75,6 +75,10 @@ function SEO({ description, meta, keywords, title, slug, articleAuthor}) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `Hatena::Bookmark`,
+          content: 'nocomment',
+        }
       ]
         .concat(
           keywords.length > 0
