@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.1.0
-:revdate: 2020-03-01T05:22:32+0900
-:revremark: Add Support pnpm section.
+:revnumber: v1.2.0
+:revdate: 2020-03-01T06:05:37+0900
+:revremark: Add Skip Deployment section.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -113,6 +113,54 @@ gatsby-plugin-pnpm^].
 [horizontal]
 url         :: {repository-url}
 name        :: {doctitle}
+
+=== Skip deployment with commit message
+
+If the trigger commit message matachs to the next pattern, it will not deploy
+to netlify. If `DO-CD` is included in the commit message,
+will deploy even if it matches the pattern.
+
+* Starts with
+  ** docs
+  ** style
+  ** refactor
+  ** test
+  ** chore
+* Contained
+  ** WIP
+  ** SKIP-CD
+
+.Examples
+[cols=2, options="header, autowidth"]
+|===
+|commit message|skip?
+2+h|Starts with
+|docs   |Yes
+|a docs |No
+
+2+h|Contained
+|docs WIP     |Yes
+|SKIP-CD docs |Yes
+
+2+h|DO-CD
+|docs  DO-CD |No
+|DO-CD WIP   |No
+|===
+
+[WARNING]
+====
+.Check only trigger commit
+Check only trigger commit message. All commit message are not checked.
+THerefore, it will not deploy to netlify in the following cases:
+
+[cols=3, options="header, autowidth"]
+|===
+|No            |Commit |Skip if trigger?
+|1             |feat   |No
+|2             |fix    |No
+|3 (*trigger*) |WIP    |Yes
+|===
+====
 
 
 == How to use

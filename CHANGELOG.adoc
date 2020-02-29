@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.4.0
-:revdate: 2020-03-01T05:32:03+0900
-:revremark: add log that add pnpm support with gatsby-plugin-pnpm.
+:revnumber: v1.5.0
+:revdate: 2020-03-01T05:36:57+0900
+:revremark: add log that skip deployment with commit message.
 :doctype: article
 :description: blog-with-gatsby Change Log
 :title:
@@ -50,6 +50,7 @@ ifndef::env-github[:icons: font]
 ==== Add
 
 * `Hatena::Bookmark` in meta. (close link:{issues-url}/3[#3^])
+* Skip deployment with commit message. (close link:{issues-url}/6[#6^])
 
 ==== Update
 

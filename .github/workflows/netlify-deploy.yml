@@ -92,20 +92,31 @@ jobs:
           --connect-timeout 180 \
           | jq -r .message)
         echo "::set-env name=COMMIT_MESSAGE::$(echo ${commit_message})"
+    - name: Declare SHOULD_SKIP_DEPLOY environment variable
+      run: |
+        declare -r should_skip_deploy=$(
+          [[ $(echo ${COMMIT_MESSAGE} \
+            | grep -v "DO-CD" \
+            | grep -G "WIP\|SKIP-CD\|^\(docs\|style\|refactor\|test\|chore\)") ]] \
+            && echo true || echo false)
+        echo "::set-env name=SHOULD_SKIP_DEPLOY::$(echo ${should_skip_deploy})"
     - name: Declare DEPLOY_MESSAGE environment variable
       run: |
         declare -r deploy_message=$(
           [[ "${COMMIT_MESSAGE}" = "" || "${COMMIT_MESSAGE}" = "Not Found" ]] \
           && echo "commit SHA is ${GITHUB_SHA}" || echo "${COMMIT_MESSAGE}")
         echo "::set-env name=DEPLOY_MESSAGE::$(echo ${deploy_message})"
+      if: env.SHOULD_SKIP_DEPLOY != 'true'
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+      if: env.SHOULD_SKIP_DEPLOY != 'true'
     - name: Download public
       uses: actions/download-artifact@v1
       with:
         name: public
+      if: env.SHOULD_SKIP_DEPLOY != 'true'
     - name: Netlify Deploy
       run: |
         yarn add netlify-cli
@@ -114,3 +125,4 @@ jobs:
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      if: env.SHOULD_SKIP_DEPLOY != 'true'
