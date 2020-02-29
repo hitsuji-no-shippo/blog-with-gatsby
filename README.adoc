@@ -1,0 +1,200 @@
+= gatsby-blog-for-hns
+:author-name: hitsuji no shippo
+:!author-email:
+:author: {author-name}
+:!email: {author-email}
+:revnumber: v1.1.0
+:revdate: 2020-03-01T04:06:22+0900
+:revremark: Add Revision section.
+:doctype: article
+:description: {doctitle} README
+:title:
+:title-separtor: :
+:experimental:
+:showtitle:
+:!sectnums:
+:sectids:
+:toc: preamble
+:sectlinks:
+:sectanchors:
+:idprefix:
+:idseparator: -
+:xrefstyle: full
+:!example-caption:
+:!figure-caption:
+:!table-caption:
+:!listing-caption:
+ifdef::env-github[]
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[:icons: font]
+// Copyright
+:copyright-template: Copyright (c) 2020
+:copyright: {copyright-template} {author-name}
+// Page Attributes
+:page-creation-date: 2020-03-01T03:56:58+0900
+// Variables
+:netlify-app-url: https://app.netlify.com
+:github-url: https://github.com
+:github-profile-url: {github-url}/hitsuji-no-shippo
+:repository-url: {github-profile-url}/{doctitle}
+
+image:{repository-url}/workflows/netlify-deploy/badge.svg[
+  GitHub Actions Status,
+  link={repository-url}/actions?query=workflow%3Anetlify-deploy,
+  window=_blank]
+image:https://api.netlify.com/api/v1/badges/58f296f9-f521-447f-a8b3-b7cbe986ad76/deploy-status[
+  Netlify Status,
+  link={netlify-app-url}/sites/{doctitle}-demo/deploys,
+  window=_blank]
+
+:demo-url: https://{doctitle}-demo.netlify.com
+.Demo
+* link:{demo-url}[
+  Home^]
+* link:{demo-url}/asciidoctor-examples/[
+  Asciidoctor Examples^].
+
+image:https://www.netlify.com/img/deploy/button.svg[
+  Deploy to Netlify,
+  link={netlify-app-url}/start/deploy?repository={repository-url},
+  window=_blank]
+
+:sample-articles-repository-name: sample-articles-with-asciidoc
+:sample-articles-repository-link: link:{github-profile-url}/{sample-articles-repository-name}[ \
+  hitsuji-no-shippo/{sample-articles-repository-name}^]
+[NOTE]
+====
+:netlify-link: link:./netlify.toml[ \
+  netlify.toml^]
+.Change netliby config with {netlify-link}
+[horizontal]
+build command:: `yarn build`
+environment variable:: Add `$ARTICLES_REPOSITORY`.
+                       The value is {sample-articles-repository-link}.
+====
+
+[IMPORTANT]
+====
+I'm an English leanear. Issues with README fixes are also welcome.
+====
+
+:gatsby-blog-with-asciidoctor-link: link:{github-profile-url}/gatsby-blog-with-asciidoctor/tree/v0.1.0[ \
+  hitsuji-no-shippo/gatsby-blog-with-asciidoctor 2020-03-01 (v0.1.0)^]
+== Diffrences from {gatsby-blog-with-asciidoctor-link}
+
+[IMPORTANT]
+====
+If you want to know all the features, read the README for
+link:{github-profile-url}/gatsby-simple-blog-with-asciidoctor/tree/0d8e89b8edc95c2190aa1714c87d329b9b857813[
+hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor 2020-03-01^] and
+{gatsby-blog-with-asciidoctor-link}.
+====
+
+=== Revision
+
+Display the following informations under the line containing update date:
+
+[cols=2, options="headers, autowidth"]
+|==================================
+|Name           |Asciidoc Attribute
+|Creation date m|page-creation-date
+|Number        m|revnumber
+|Remark        m|revremark
+|==================================
+
+When displaying the remark on index page, there is a character limit as follows.
+
+.Max number of characters
+[horizontal]
+Halfwidth (e.g. a, 1)  :: 20
+Fullwidth (e.g. あ, 一):: 10
+
+Not displayed if update (`revdate`) and creation (`page-creation-date`) are
+the same. Even if the asciidoc attribute to be used does not exist,
+it is not displayed.
+
+=== Link for HOW TO DISAGREE
+
+Add link for link:http://www.paulgraham.com/disagree.html[
+HOW TO DISAGREE^] above disqus comments.
+
+=== Repository link in Footer
+
+.Change items
+[horizontal]
+url         :: {repository-url}
+name        :: {doctitle}
+
+
+== How to use
+
+[source, bash, subs="attributes"]
+----
+git clone {repository-url} my-blog-folder
+cd my-blog-folder
+yarn
+yarn dev
+----
+
+== LICENSE
+
+=== This project
+
+This project is licensed under the terms of the link:/LICENSE[
+MIT license^].
+
+=== Materials used
+
+:cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[ \
+  CC0 1.0^]
+:font-awesome-github-repo-url: {github-url}/FortAwesome/Font-Awesome
+:dova-s-url: https://dova-s.jp
+:evericons-url: http://www.evericons.com
+[cols="2*d,a", options="header, autowidth"]
+|===
+|Material
+|LICENSE
+|path
+
+|link:https://visualhunt.com/photo2/170504/[
+ Profile picture^]
+|{cc0-10-link}
+|`content/assets/profile-pic.jpg`
+
+|link:{evericons-url}[
+ Language icon^]
+|{cc0-10-link}
+|`src/components/LangButton/IconLanguage.js`
+
+|link:{evericons-url}[
+ Theme icons^]
+|{cc0-10-link}
+|
+ * `src/components/Layout/ReadModeToggle/IconSun.js`
+ * `src/components/Layout/ReadModeToggle/IconMoon.js`
+
+Resized from 24x24 to 16x16.
+
+|link:{evericons-url}[
+ Scroll up icon^]
+|{cc0-10-link}
+|`src/components/Layout/ScrollUp.js`
+
+|link:{font-awesome-github-repo-url}[
+ Admonition icons^]
+|link:{font-awesome-github-repo-url}/#license[
+ CC BY 4.0 License^]
+|link:{font-awesome-github-repo-url}[
+ FortAwesome/Font-Awesome^]
+
+|link:{dova-s-url}/bgm/play5513.html[
+ Moon La^]
+|link:{dova-s-url}/_contents/license/[
+ SOUND LICENSE^]
+|`static/audios/moon_la.mp3`
+|===

@@ -1,0 +1,79 @@
+= Change Log
+:author-name: hitsuji no shippo
+:!author-email:
+:author: {author-name}
+:!email: {author-email}
+:revnumber: v1.0.0
+:revdate: 2020-03-01T04:30:42+0900
+:revremark: First Edition
+:doctype: article
+:description: blog-with-gatsby Change Log
+:title:
+:title-separtor: :
+:experimental:
+:showtitle:
+:!sectnums:
+:sectids:
+:toc: auto
+:sectlinks:
+:sectanchors:
+:idprefix:
+:idseparator: -
+:xrefstyle: full
+:!example-caption:
+:!figure-caption:
+:!table-caption:
+:!listing-caption:
+ifdef::env-github[]
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[:icons: font]
+// Copyright
+:copyright-template: Copyright (c) 2020
+:copyright: {copyright-template} {author-name}
+// Page Attributes
+:page-creation-date: 2020-03-01T04:30:42+0900
+// Variables
+:github-url: https://github.com
+:github-profile-url: {github-url}/hitsuji-no-shippo
+:repository-url: {github-profile-url}/blog-with-gatsby
+:issues-url: {repository-url}/issues
+
+== 0.0.0 (2020-03-01)
+
+=== Chore
+
+:gatsby-blog-for-hns-url: {author-github-profile-url}/gatsby-blog-for-hns
+* Clone link:{gatsby-blog-for-hns-url}[
+  hitsuji-no-shippo/gatsby-blog-for-hns^]. (close link:{issues-url}/1[#1^])
++
+--
+:gatsby-blog-for-hns-commit-id: d0d72fb15aeee7d4d317e12b3e7b95f17961c87e
+[horizontal]
+repository url:: {gatsby-blog-for-hns-url}.git
+tag           :: link:{gatsby-blog-for-hns-url}/tree/v0.1.0[
+                      v0.1.0]
+commit id     :: link:{gatsby-blog-for-hns-url}/tree/{gatsby-blog-for-hns-commit-id}[
+                      {gatsby-blog-for-hns-commit-id}^]
+--
+
+== Copyright
+
+=== LICENSE
+
+This document is licensed under
+link:https://creativecommons.org/publicdomain/zero/1.0/[
+CC0 1.0].
+
+
+{copyright-template} link:https://hitsuji-no-shippo.com[{author-name}]
+
+////
+Asciidoc Copyright
+This asciidoc code is licensed under CC0 1.0
+https://creativecommons.org/publicdomain/zero/1.0/
+////
