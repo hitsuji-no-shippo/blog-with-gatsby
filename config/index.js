@@ -14,7 +14,6 @@ const site = {
     twitter: author.twitter,
   },
   disqusShortName: 'gatsby-blog',
-  googleTrackingId: '',
   lang: 'en',
   displayTranslations: true,
 };

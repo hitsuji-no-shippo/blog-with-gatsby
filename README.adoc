@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v0.0.0
-:revdate: 2020-03-01T04:32:39+0900
-:revremark: Change name and url of repository and blog.
+:revnumber: v1.0.0
+:revdate: 2020-03-01T05:20:24+0900
+:revremark: Breaking cahnge.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -79,45 +79,26 @@ environment variable:: Add `$ARTICLES_REPOSITORY`.
 I'm an English leanear. Issues with README fixes are also welcome.
 ====
 
-:gatsby-blog-with-asciidoctor-link: link:{github-profile-url}/gatsby-blog-with-asciidoctor/tree/v0.1.0[ \
-  hitsuji-no-shippo/gatsby-blog-with-asciidoctor 2020-03-01 (v0.1.0)^]
-== Diffrences from {gatsby-blog-with-asciidoctor-link}
+:gatsby-blog-for-hns-link: link:{github-profile-url}/gatsby-blog-for-hns/tree/v0.1.0[ \
+  hitsuji-no-shippo/gatsby-blog-for-hns 2020-03-01 (v0.1.0)^]
+== Diffrences from {gatsby-blog-for-hns-link}
 
 [IMPORTANT]
 ====
-If you want to know all the features, read the README for
-link:{github-profile-url}/gatsby-simple-blog-with-asciidoctor/tree/0d8e89b8edc95c2190aa1714c87d329b9b857813[
-hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor 2020-03-01^] and
-{gatsby-blog-with-asciidoctor-link}.
+If you want to know all the features, read the following all README.
+
+* link:{github-profile-url}/gatsby-simple-blog-with-asciidoctor/tree/0d8e89b8edc95c2190aa1714c87d329b9b857813[
+  hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor 2020-03-01^]
+* link:{github-profile-url}/gatsby-blog-with-asciidoctor/tree/v0.1.0[
+  hitsuji-no-shippo/gatsby-blog-with-asciidoctor 2020-03-01 (v0.1.0)^]
+* {gatsby-blog-for-hns-link}
 ====
 
-=== Revision
+:gatsby-official-plugin-link-template: link:https://github.com/gatsbyjs/gatsby/tree/master/packages
+=== Don't support Google Analytics
 
-Display the following informations under the line containing update date:
-
-[cols=2, options="headers, autowidth"]
-|==================================
-|Name           |Asciidoc Attribute
-|Creation date m|page-creation-date
-|Number        m|revnumber
-|Remark        m|revremark
-|==================================
-
-When displaying the remark on index page, there is a character limit as follows.
-
-.Max number of characters
-[horizontal]
-Halfwidth (e.g. a, 1)  :: 20
-Fullwidth (e.g. あ, 一):: 10
-
-Not displayed if update (`revdate`) and creation (`page-creation-date`) are
-the same. Even if the asciidoc attribute to be used does not exist,
-it is not displayed.
-
-=== Link for HOW TO DISAGREE
-
-Add link for link:http://www.paulgraham.com/disagree.html[
-HOW TO DISAGREE^] above disqus comments.
+Remove {gatsby-official-plugin-link-template}/gatsby-plugin-google-analytics/[
+gatsby-plugin-google-analytics^].
 
 === Repository link in Footer
 
