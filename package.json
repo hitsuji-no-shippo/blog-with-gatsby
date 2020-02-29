@@ -17,6 +17,7 @@
     "gatsby-plugin-feed": "^2.3.26",
     "gatsby-plugin-manifest": "^2.2.16",
     "gatsby-plugin-offline": "^3.0.6",
+    "gatsby-plugin-pnpm": "^1.2.3",
     "gatsby-plugin-react-helmet": "^3.1.7",
     "gatsby-plugin-sass": "^2.1.24",
     "gatsby-plugin-sharp": "^2.2.21",
@@ -85,16 +86,16 @@
   "scripts": {
     "clone-articles": "bash ./setup/clone-articles.sh",
     "submodule": "git submodule update --init --recursive",
-    "setup": "yarn run clone-articles && yarn run submodule",
-    "build": "yarn run setup && gatsby build",
+    "setup": "npm run clone-articles && npm run submodule",
+    "build": "npm run setup && gatsby build",
     "build:gh": "gatsby build --prefix-paths",
-    "dev": "yarn run setup && gatsby develop",
+    "dev": "npm run setup && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "yarn run dev",
+    "start": "npm run dev",
     "serve": "gatsby serve",
     "eslint": "eslint .",
     "jest": "jest",
-    "test": "yarn run setup && cross-env NODE_ENV=test yarn run eslint && cross-env NODE_ENV=test yarn run jest"
+    "test": "npm run setup && cross-env NODE_ENV=test npm run eslint && cross-env NODE_ENV=test npm run jest"
   },
   "husky": {
     "hooks": {
@@ -103,7 +104,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "yarn test --testPathPattern=''"
+      "npm test --testPathPattern=''"
     ]
   }
 }

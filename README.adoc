@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.0.0
-:revdate: 2020-03-01T05:20:24+0900
-:revremark: Breaking cahnge.
+:revnumber: v1.1.0
+:revdate: 2020-03-01T05:22:32+0900
+:revremark: Add Support pnpm section.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -99,6 +99,13 @@ If you want to know all the features, read the following all README.
 
 Remove {gatsby-official-plugin-link-template}/gatsby-plugin-google-analytics/[
 gatsby-plugin-google-analytics^].
+
+:pnpm-link: link:https://pnpm.js.org[ \
+  pnpm^]
+=== Support {pnpm-link}
+
+Use link:https://github.com/Js-Brecht/gatsby-plugin-pnpm[
+gatsby-plugin-pnpm^].
 
 === Repository link in Footer
 

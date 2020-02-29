@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.3.0
-:revdate: 2020-03-01T04:36:56+0900
-:revremark: add log that remove gatsby-plugin-google-analytics.
+:revnumber: v1.4.0
+:revdate: 2020-03-01T05:32:03+0900
+:revremark: add log that add pnpm support with gatsby-plugin-pnpm.
 :doctype: article
 :description: blog-with-gatsby Change Log
 :title:
@@ -55,6 +55,12 @@ ifndef::env-github[:icons: font]
 
 * Remove link:https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/[
   gatsby-plugin-google-analytics^]. (close link:{issues-url}/4[#4^])
+
+
+=== Chore
+
+* Add pnpm support with link:https://github.com/Js-Brecht/gatsby-plugin-pnpm[
+  gatsby-plugin-pnpm^]. (close link:{issues-url}/5[#5^])
 
 
 == 0.0.0 (2020-03-01)
