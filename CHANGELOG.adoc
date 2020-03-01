@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.5.0
-:revdate: 2020-03-01T05:36:57+0900
-:revremark: add log that skip deployment with commit message.
+:revnumber: v1.6.0
+:revdate: 2020-03-01T11:28:00+0900
+:revremark: add log that \
+            add web app manifests config with gatsby-plugin-manifest.
 :doctype: article
 :description: blog-with-gatsby Change Log
 :title:
@@ -51,6 +52,8 @@ ifndef::env-github[:icons: font]
 
 * `Hatena::Bookmark` in meta. (close link:{issues-url}/3[#3^])
 * Skip deployment with commit message. (close link:{issues-url}/6[#6^])
+* Web app manifests config with gatsby-plugin-manifest.
+  (close link:{issues-url}/7[#7^])
 
 ==== Update
 

@@ -13,6 +13,7 @@ const site = {
   social : {
     twitter: author.twitter,
   },
+  manifestShortName: 'Gatsby Blog',
   disqusShortName: 'gatsby-blog',
   lang: 'en',
   displayTranslations: true,

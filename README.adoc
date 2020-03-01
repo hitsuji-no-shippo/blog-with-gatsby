@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.2.0
-:revdate: 2020-03-01T06:05:37+0900
-:revremark: Add Skip Deployment section.
+:revnumber: v1.3.0
+:revdate: 2020-03-01T11:47:10+0900
+:revremark: Add Web app manifests config section.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -106,6 +106,18 @@ gatsby-plugin-google-analytics^].
 
 Use link:https://github.com/Js-Brecht/gatsby-plugin-pnpm[
 gatsby-plugin-pnpm^].
+
+=== Web app manifests config
+
+Set key of {gatsby-official-plugin-link-template}/gatsby-plugin-manifest[
+gatsby-plugin-manifest^].
+
+[cols=2, options="header, autowidth"]
+|===
+|key  |value
+|name |site.title
+|name |site.manifestShortName (Default is `Gatsby Blog`.)
+|===
 
 === Repository link in Footer
 
