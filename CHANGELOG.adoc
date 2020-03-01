@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.6.0
-:revdate: 2020-03-01T11:28:00+0900
-:revremark: add log that \
-            add web app manifests config with gatsby-plugin-manifest.
+:revnumber: v1.7.0
+:revdate: 2020-03-01T12:09:23+0900
+:revremark: add log that make config link in another repository.
 :doctype: article
 :description: blog-with-gatsby Change Log
 :title:
@@ -54,6 +53,7 @@ ifndef::env-github[:icons: font]
 * Skip deployment with commit message. (close link:{issues-url}/6[#6^])
 * Web app manifests config with gatsby-plugin-manifest.
   (close link:{issues-url}/7[#7^])
+* Make config link in another repository. (close link:{issues-url}/8[#8^])
 
 ==== Update
 

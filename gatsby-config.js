@@ -56,6 +56,8 @@ module.exports = {
       options: {
         attributes: {
           values: {
+            'site-name@': title,
+            'site-url@': siteUrl,
             'author@': author.name,
             ...Object.entries({
               'email': author.email,
@@ -83,7 +85,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/images/gatsby-icon.png`,
+        icon: `content/assets/icon.png`,
       },
     },
     `gatsby-plugin-offline`,

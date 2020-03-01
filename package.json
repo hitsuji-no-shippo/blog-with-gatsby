@@ -85,8 +85,9 @@
   },
   "scripts": {
     "clone-articles": "bash ./setup/clone-articles.sh",
+    "make-config-link": " bash ./setup/make-config-link.sh",
     "submodule": "git submodule update --init --recursive",
-    "setup": "npm run clone-articles && npm run submodule",
+    "setup": "npm run clone-articles && npm run make-config-link && npm run submodule ",
     "build": "npm run setup && gatsby build",
     "build:gh": "gatsby build --prefix-paths",
     "dev": "npm run setup && gatsby develop",

@@ -138,3 +138,5 @@ public
 
 # Articles
 content/blog/
+config
+asciidoctor-option.yaml

@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.3.0
-:revdate: 2020-03-01T11:47:10+0900
-:revremark: Add Web app manifests config section.
+:revnumber: v1.4.0
+:revdate: 2020-03-01T12:09:20+0900
+:revremark: Add section that Link config file in another repository and \
+            Article repository to clone.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -52,7 +53,7 @@ image:https://api.netlify.com/api/v1/badges/7ce502bf-14a7-4509-94ea-ad4ffb97aafa
   link={netlify-app-url}/sites/hitsuji-no-shippo/deploys,
   window=_blank]
 
-.Blog
+.Blog (Written in Japanes)
 link:https://www.hitsuji-no-shippo.me[Every Day, Every Day is Birthdays^]
 
 image:https://www.netlify.com/img/deploy/button.svg[
@@ -60,9 +61,8 @@ image:https://www.netlify.com/img/deploy/button.svg[
   link={netlify-app-url}/start/deploy?repository={repository-url},
   window=_blank]
 
-:sample-articles-repository-name: sample-articles-with-asciidoc
-:sample-articles-repository-link: link:{github-profile-url}/{sample-articles-repository-name}[ \
-  hitsuji-no-shippo/{sample-articles-repository-name}^]
+:articles-repostiroy-link: link:{github-profile-url}/blog-articles[ \
+  hitsuji-no-shippo/blog-articles^]
 [NOTE]
 ====
 :netlify-link: link:./netlify.toml[ \
@@ -71,7 +71,7 @@ image:https://www.netlify.com/img/deploy/button.svg[
 [horizontal]
 build command:: `yarn build`
 environment variable:: Add `$ARTICLES_REPOSITORY`.
-                       The value is {sample-articles-repository-link}.
+                       The value is {articles-repostiroy-link}.
 ====
 
 [IMPORTANT]
@@ -93,6 +93,32 @@ If you want to know all the features, read the following all README.
   hitsuji-no-shippo/gatsby-blog-with-asciidoctor 2020-03-01 (v0.1.0)^]
 * {gatsby-blog-for-hns-link}
 ====
+
+=== Link config files in another repository
+
+Using link:./setup/make-config-link.sh[
+setup/make-config-link.sh^], make blog and asciidoctor config symbolic link
+in another repositroy. *If there is config directory of file, do not make link.*
+
+Use `${GATSBY_CONFIG_DIRECTORY}` environment variable to make a link.
+If `${GATSBY_CONFIG_DIRECTORY}` is unset, `config/gatsby` is used.
+
+.Link target and link name.
+[cols=2, options="header, autowidth"]
+|===
+|target
+|link name
+
+|`content/blog/${GATSBY_CONFIG_DIRECTORY}`
+|`config`
+
+|`content/blog/${GATSBY_CONFIG_DIRECTORY}/asciidoctor-option.yaml`
+|`asciidoctor-option.yaml`
+|===
+
+=== Article repository to clone
+
+{articles-repostiroy-link} (Written in Japanes)
 
 :gatsby-official-plugin-link-template: link:https://github.com/gatsbyjs/gatsby/tree/master/packages
 === Don't support Google Analytics
@@ -235,10 +261,4 @@ Resized from 24x24 to 16x16.
  CC BY 4.0 License^]
 |link:{font-awesome-github-repo-url}[
  FortAwesome/Font-Awesome^]
-
-|link:{dova-s-url}/bgm/play5513.html[
- Moon La^]
-|link:{dova-s-url}/_contents/license/[
- SOUND LICENSE^]
-|`static/audios/moon_la.mp3`
 |===
