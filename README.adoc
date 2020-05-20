@@ -54,7 +54,7 @@ image:https://api.netlify.com/api/v1/badges/7ce502bf-14a7-4509-94ea-ad4ffb97aafa
   window=_blank]
 
 .Blog (Written in Japanes)
-link:https://www.hitsuji-no-shippo.me[Every Day, Every Day is Birthdays^]
+link:https://blog.hitsuji-no-shippo.me[Every Day, Every Day is Birthdays^]
 
 image:https://www.netlify.com/img/deploy/button.svg[
   Deploy to Netlify,
